@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/27 19:37:35 by didos-re          #+#    #+#             */
-/*   Updated: 2022/03/28 02:40:00 by didos-re         ###   ########.fr       */
+/*   Created: 2022/03/28 02:43:16 by didos-re          #+#    #+#             */
+/*   Updated: 2022/03/29 05:23:21 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+#include <unistd.h>
+
+void	ft_putchar(char c);
+
+int	main(int argc, char **argv)
 {
 	int	i;
+	int	h;
 
-	i = 0;
-	while (*(s1 + i) == *(s2 + i) && *(s1) && *(s2))
+	(void) argc;
+	(void) argv;
+	i = 1;
+	while (i < argc)
 	{
+		h = 0;
+		while (argv[i][h] != '\0')
+		{
+			ft_putchar(argv[i][h]);
+			h++;
+		}
+		ft_putchar('\n');
 		i++;
 	}
-	return (*(s1 + i) - *(s2 + i));
+	return (0);
 }
