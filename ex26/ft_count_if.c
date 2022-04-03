@@ -1,49 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rascunho.c                                         :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 20:20:41 by didos-re          #+#    #+#             */
-/*   Updated: 2022/03/31 21:47:43 by didos-re         ###   ########.fr       */
+/*   Created: 2022/04/03 06:23:12 by didos-re          #+#    #+#             */
+/*   Updated: 2022/04/03 06:33:45 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int	*ft_range(int min, int max)
+int	ft_count_if(char **tab, int (*f)(char *))
 {
-	int	*num;
 	int	i;
+	int	j;
 
-	if (min >= max)
-		return (num = '\0');
-
-	num = (int *) malloc((max - min) * sizeof(int));
 	i = 0;
-	while (i < (max - min))
+	j = 0;
+	while (tab[i][0] != '0')
 	{
-		num[i] = min + i;
+		if (f(tab[i]) == 1)
+			j++;
 		i++;
 	}
-	return (num);
-}
-
-int	main()
-{
-	int	min;
-	int max;
-	int	i;
-	
-	min = 50;
-	max = 100;
-	i = 0;
-	while (i < (max - min))
-	{
-		printf("%d, ", ft_range(min, max)[i]);
-		i++;
-	}
-	printf("\n");
+	return (j);
 }

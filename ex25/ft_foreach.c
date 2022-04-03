@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 21:12:47 by didos-re          #+#    #+#             */
-/*   Updated: 2022/04/03 05:50:59 by didos-re         ###   ########.fr       */
+/*   Created: 2022/04/03 06:20:16 by didos-re          #+#    #+#             */
+/*   Updated: 2022/04/03 06:33:05 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_foreach(int *tab, int lenght, void (*f)(int))
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	int	i;
+
+	i = 0;
+	while (i++ < lenght)
+		f(*tab++);
 }

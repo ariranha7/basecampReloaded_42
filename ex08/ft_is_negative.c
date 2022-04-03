@@ -6,11 +6,11 @@
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 16:23:54 by didos-re          #+#    #+#             */
-/*   Updated: 2022/03/25 16:32:13 by didos-re         ###   ########.fr       */
+/*   Updated: 2022/04/03 05:33:48 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {

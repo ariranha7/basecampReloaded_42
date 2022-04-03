@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 21:12:47 by didos-re          #+#    #+#             */
-/*   Updated: 2022/04/03 05:50:59 by didos-re         ###   ########.fr       */
+/*   Created: 2022/04/03 06:29:45 by didos-re          #+#    #+#             */
+/*   Updated: 2022/04/03 06:34:24 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include "ft.h"
+
+int	main(int argc, char **argv)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	if (argc == 1)
+		ft_putstr("File name missing.\n");
+	else if (argc > 2)
+		ft_putstr("Too many arguments.\n");
+	else
+		ft_display_file(*(++argv));
+	return (0);
 }

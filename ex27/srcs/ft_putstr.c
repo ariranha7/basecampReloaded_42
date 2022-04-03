@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didos-re <didos-re@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 21:12:47 by didos-re          #+#    #+#             */
-/*   Updated: 2022/04/03 05:50:59 by didos-re         ###   ########.fr       */
+/*   Created: 2022/04/03 06:31:31 by didos-re          #+#    #+#             */
+/*   Updated: 2022/04/03 06:34:32 by didos-re         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include "ft.h"
+
+void	ft_putstr(char *str)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	while (*str)
+		ft_putchar(*str++);
 }
